@@ -23,6 +23,6 @@ async def execute_command(
         "command": request.command,
         "user_context": user,
         "exit_code": result.returncode,
-        "stdout": result.stdout.strip(),
-        "stderr": result.stderr.strip()
+        "stdout": result.stdout.split('\n'), # 
+        "stderr": result.stderr.split('\n') #
     }
